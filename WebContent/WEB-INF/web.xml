@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+
+
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>jp.co.vaile.nerva.filter.LoginFilter</filter-class>
+		<init-param>
+			<param-name>exclude</param-name>
+			<param-value>/Nerva/jsp/login.jsp,/Nerva/jsp/error.jsp,/.*.css,/.*.js,/Nerva/jsp/LoginAction,/Nerva/jsp/LogoutAction</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>UserManagementAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.login.UserManagementAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserManagementAction</servlet-name>
+		<url-pattern>/jsp/UserManagementAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoginAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.login.LoginAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginAction</servlet-name>
+		<url-pattern>/jsp/LoginAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegistEmpAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.registEmployee.RegistEmpAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegistEmpAction</servlet-name>
+		<url-pattern>/jsp/RegistEmpAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogoutAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.menu.LogoutAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LogoutAction</servlet-name>
+		<url-pattern>/jsp/LogoutAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowCreateTeamAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.createTeam.ShowCreateTeamAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowCreateTeamAction</servlet-name>
+		<url-pattern>/jsp/ShowCreateTeamAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowSearchEmpAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchemployee.ShowSearchEmpAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowSearchEmpAction</servlet-name>
+		<url-pattern>/jsp/ShowSearchEmpAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchEmpAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchemployee.SearchEmpAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SearchEmpAction</servlet-name>
+		<url-pattern>/jsp/SearchEmpAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchEmpSessionAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchemployee.SearchEmpSessionAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SearchEmpSessionAction</servlet-name>
+		<url-pattern>/jsp/SearchEmpSessionAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CreateTeamAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.createTeam.CreateTeamAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CreateTeamAction</servlet-name>
+		<url-pattern>/jsp/CreateTeamAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowTeamDetailInfoAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.teamDetail.ShowTeamDetailInfoAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowTeamDetailInfoAction</servlet-name>
+		<url-pattern>/jsp/ShowTeamDetailInfoAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeamDetailBackPageAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.teamDetail.TeamDetailBackPageAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TeamDetailBackPageAction</servlet-name>
+		<url-pattern>/jsp/TeamDetailBackPageAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TeamDetailSessionAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.teamDetail.TeamDetailSessionAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TeamDetailSessionAction</servlet-name>
+		<url-pattern>/jsp/TeamDetailSessionAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowRegistProject</servlet-name>
+
+		<servlet-class>jp.co.vaile.nerva.registproject.ShowRegistProjectAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowRegistProject</servlet-name>
+		<url-pattern>/jsp/ShowRegistProject</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegistProjectAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.registproject.RegistProjectAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegistProjectAction</servlet-name>
+		<url-pattern>/jsp/RegistProjectAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchTeamAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchTeam.SearchTeamAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SearchTeamAction</servlet-name>
+		<url-pattern>/jsp/SearchTeamAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchTeamSessionAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchTeam.SearchTeamSessionAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SearchTeamSessionAction</servlet-name>
+		<url-pattern>/jsp/SearchTeamSessionAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowSearchTeamAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchTeam.ShowSearchTeamAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowSearchTeamAction</servlet-name>
+		<url-pattern>/jsp/ShowSearchTeamAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteTeamAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchTeam.DeleteTeamAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DeleteTeamAction</servlet-name>
+		<url-pattern>/jsp/DeleteTeamAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegistEmpPageAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchemployee.RegistEmpPageAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegistEmpPageAction</servlet-name>
+		<url-pattern>/jsp/RegistEmpPageAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReturnSkillInfoAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.registEmployee.ReturnSkillInfoAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReturnSkillInfoAction</servlet-name>
+		<url-pattern>/jsp/ReturnSkillInfoAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RegistEmpCheckAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.registEmployee.RegistEmpCheckAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RegistEmpCheckAction</servlet-name>
+		<url-pattern>/jsp/RegistEmpCheckAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowProjectAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchProject.ShowProjectAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowProjectAction</servlet-name>
+		<url-pattern>/jsp/ShowProjectAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SearchProjectAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.searchProject.SearchProjectAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SearchProjectAction</servlet-name>
+		<url-pattern>/jsp/SearchProjectAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowTransferApplicationAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.transferApplication.ShowTransferApplicationAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowTransferApplicationAction</servlet-name>
+		<url-pattern>/jsp/ShowTransferApplicationAction</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>TransferApplicationAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.transferApplication.TransferApplicationAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TransferApplicationAction</servlet-name>
+		<url-pattern>/jsp/TransferApplicationAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowProjectDetailAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.detailProject.ShowProjectDetailAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowProjectDetailAction</servlet-name>
+		<url-pattern>/jsp/ShowProjectDetailAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DetailProjectSessionAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.detailProject.DetailProjectSessionAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DetailProjectSessionAction</servlet-name>
+		<url-pattern>/jsp/DetailProjectSessionAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DetailPjtBackPageAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.detailProject.DetailPjtBackPageAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DetailPjtBackPageAction</servlet-name>
+		<url-pattern>/jsp/DetailPjtBackPageAction</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>ShowUpdateProjectAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateProject.ShowUpdateProjectAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ShowUpdateProjectAction</servlet-name>
+		<url-pattern>/jsp/ShowUpdateProjectAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CheckUpdateProjectAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateProject.CheckUpdateProjectAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CheckUpdateProjectAction</servlet-name>
+		<url-pattern>/jsp/CheckUpdateProjectAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateProjectAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateProject.UpdateProjectAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateProjectAction</servlet-name>
+		<url-pattern>/jsp/UpdateProjectAction</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>DeleteProjectAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateProject.DeleteProjectAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DeleteProjectAction</servlet-name>
+		<url-pattern>/jsp/DeleteProjectAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpDetailBackPageAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.detailEmployee.EmpDetailBackPageAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>EmpDetailBackPageAction</servlet-name>
+		<url-pattern>/jsp/EmpDetailBackPageAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>EmpDetailInfoAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.detailEmployee.EmpDetailInfoAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpDetailInfoAction</servlet-name>
+		<url-pattern>/jsp/EmpDetailInfoAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteEmpAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateEmployee.DeleteEmpAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteEmpAction</servlet-name>
+		<url-pattern>/jsp/DeleteEmpAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShowUpdateEmpAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateEmployee.ShowUpdateEmpAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShowUpdateEmpAction</servlet-name>
+		<url-pattern>/jsp/ShowUpdateEmpAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateEmpAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateEmployee.UpdateEmpAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateEmpAction</servlet-name>
+		<url-pattern>/jsp/UpdateEmpAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateEmpBackPageAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateEmployee.UpdateEmpBackPageAction</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateEmpBackPageAction</servlet-name>
+		<url-pattern>/jsp/UpdateEmpBackPageAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MonitorChangeSkillInfoAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateEmployee.MonitorChangeSkillInfoAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MonitorChangeSkillInfoAction</servlet-name>
+		<url-pattern>/jsp/MonitorChangeSkillInfoAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReturnTeamInfoAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateEmployee.ReturnTeamInfoAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReturnTeamInfoAction</servlet-name>
+		<url-pattern>/jsp/ReturnTeamInfoAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RetrunAddableTeamListAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateProject.RetrunAddableTeamListAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>RetrunAddableTeamListAction</servlet-name>
+		<url-pattern>/jsp/RetrunAddableTeamListAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReturnMasterTableInfoAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateEmployee.ReturnMasterTableInfoAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ReturnMasterTableInfoAction</servlet-name>
+		<url-pattern>/jsp/ReturnMasterTableInfoAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateEmpCheckAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.updateEmployee.UpdateEmpCheckAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UpdateEmpCheckAction</servlet-name>
+		<url-pattern>/jsp/UpdateEmpCheckAction</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ManagementAttendanceBackPageAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.managementattedance.ManagementAttendanceBackPageAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ManagementAttendanceBackPageAction</servlet-name>
+		<url-pattern>/jsp/ManagementAttendanceBackPageAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ManagementAttendancePageAction</servlet-name>
+		<servlet-class>jp.co.vaile.nerva.managementattedance.ManagementAttendancePageAction</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ManagementAttendancePageAction</servlet-name>
+		<url-pattern>/jsp/ManagementAttendancePageAction</url-pattern>
+	</servlet-mapping>
+</web-app>

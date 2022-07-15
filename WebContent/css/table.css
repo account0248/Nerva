@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+table {
+  width: 95%;
+  margin: 0 auto;
+  border: solid 1px;
+  text-align:center;
+}
+
+table th {
+	background-color: #0000FF;
+	color: #FFFFFF;
+}
+
+table td {
+	background-color: #EEEEEE;
+	color: #000000;
+}
+
+/*テーブル幅4100%固定*/
+.table-w100{
+  width:100%;
+}
+.select {
+width:70%;
+}
+
+/*詳細ボタン*/
+.detail_button_width{
+	width: 50px;
+}
+/*削除ボタン*/
+.delete_button_width{
+	width: 50px;
+}
+/*チームID*/
+.teamID_width{
+	width: 100px;
+}
+/*チーム名*/
+.teamName_width{
+	width: 135px;
+}
+/*所属部長*/
+.teamManagerName_width{
+	width: 130px;
+}
+/*チームリーダー*/
+.teamLeaderName_width{
+	width: 135px;
+}
+/*所属会社*/
+.CompanyName_width{
+	width: 130px;
+}
+/*担当案件*/
+.projectName_width{
+	width: auto; 
+}
+/*所属人数*/
+.totalBelongMember_width{
+	width: 60px;
+}
+/*従業員ID*/
+.employeeId_width{
+	width: 100px;
+}
+/*従業員名*/
+.employeeName_width{
+	width: 150px;
+}
+/*担当業種*/
+.Industry_width{
+	width: 65px;
+}
+/*案件帰属会社*/
+.ProjectAttributionCompany_width{
+	width: 100px;
+}
+/*所属部長*/
+.ManagerName_width{
+	width: 100px;
+}
+/*担当*/
+.Role_width{
+	width: 120px;
+}
+/*契約形態*/
+.ContractType_width{
+	width: 100px;
+}
+/*月単価*/
+.MonthlyUnitPrice_width{
+	width: 85px;
+}
+/*スキルタイプ*/
+.Skill_width{
+	width: 100px;
+}
+/*経験年数*/
+.ExperienceYears_width{
+	width: 130px;
+}
+/*案件ID*/
+.projectId_width{
+	width: 70px;
+}
+/*案件ID*/
+.projectOwner_width{
+	width: 80px;
+}
+/*所属人数*/
+.Member_width{
+	width: 85px;
+}
+/*日付*/
+.Date_width{
+	width: 150px;
+}
+
+/*テキストボックス幅*/
+.tableList input[type=text],.tableList input[type=password],.tableList select{
+	width:90%;
+}
+
+/*曜日*/
+.dayOfWeek_width{
+  width: 5%;
+}
+
+/*月日、有給日数*/
+.day_width{
+  width: 8%;
+}
+
+/*開始、終了、休憩、有給時間*/
+.time_width{
+  width: 7%;
+}
+
+/*有給期間等*/
+.paidPeriod_width{
+  width: 14%;
+}
+
+#Attendance input[type=text]{
+  width: 90%;
+  font-size: 0.75em;
+}
+
+#Attendance select{
+  width: 70%;
+}
+
+/*従業員ID*/
+.employeeId_width{
+  width: 10%;
+}
+
+/*従業員名*/
+.employeeName_width{
+  width: 15%;
+}
+
+/*所属会社*/
+.CompanyName_width{
+  width: 13%;
+}
+
+/*担当案件*/
+.projectName_width{
+  width: auto;
+}
+
+/*所属部長*/
+.teamManagerName_width{
+  width: 13%;
+}
+
+/*チーム名*/
+.teamName_width{
+  width: 13.5%;
+}
+
+/*詳細ボタン*/
+.detail_button_width{
+  width: 5%;
+}
+
+/*勤怠ボタン*/
+.Attendance_button_width{
+  width: 10%;
+}
+
+
+/*テーブルの横幅(２列共通)*/
+.table-w30{
+  width: 30%;
+}
+.table-w70{
+  width:70%;
+}
+.table-w50{
+  width:50%;
+}.table-w25{
+  width:25%;
+}
+.table-w10{
+  width:10%;
+}
+.table-w12{
+  width:12%;
+}
+.table-w15{
+  width:15%;
+}
+.table-w24{
+  width:24%;
+}
+.table-w18{
+  width:18%;
+}
+.width93{
+	width:93%;
+}

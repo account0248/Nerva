@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<Configuration status="off">
+
+	<!-- Propertiesは、nameの値を変数として使える -->
+	<Properties>
+		<Property name="format1">%d{yyyy/MM/dd HH:mm:ss.SSS} [%t] %-6p %c{10}%m%n</Property>
+
+		<!--結合環境用のログ出力先
+		<Property name="environment">/opt/apache-tomcat-8.5.45/logs/</Property> -->
+		<!-- ローカル環境用のログ出力先 -->
+		<Property name="environment">d:/logs/</Property>
+
+		<Property name="logfile">${environment}NelvatLog.log</Property>
+		<Property name="logfile-archive">d:/logs/NelvatLog_%d{yyyy-MM-dd}-%i.log</Property>
+	</Properties>
+
+	<Appenders>
+		<!-- コンソールに出力する設定 -->
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout>
+				<pattern>${format1}</pattern>
+			</PatternLayout>
+		</Console>
+
+		<!-- ファイルに出力する設定 -->
+		<RollingFile name="logfile001" append="true"
+			fileName="${logfile}" filePattern="${logfile-archive}">
+			<PatternLayout>
+				<pattern>${format1}</pattern>
+			</PatternLayout>
+			<Policies>
+				<!-- 1MBに達したらローテーションのファイルを作成する -->
+				<SizeBasedTriggeringPolicy size="1MB" />
+			</Policies>
+			<!-- ローテーションのファイルは、3つ持つ -->
+			<DefaultRolloverStrategy max="3" />
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<!-- trace以上のログを出力する -->
+		<Root level="trace">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="logfile001" />
+		</Root>
+	</Loggers>
+</Configuration>
